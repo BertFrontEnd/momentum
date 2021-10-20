@@ -1,0 +1,44 @@
+.footer {
+  @include alignment(space-between, flex-end, row, wrap);
+  width: 100%;
+
+  .footer__todo {
+    width: 250px;
+  }
+
+  .footer__quote {
+    @include alignment(center, center, column, nowrap);
+    width: 400px;
+
+    .quote__text {
+      text-align: center;
+    }
+  }
+
+  .footer__settings {
+    @include alignment(flex-start, flex-end, column, nowrap);
+    width: 250px;
+
+    .settings__image {
+      @include alignment(flex-end, space-between, row, nowrap);
+    }
+
+    .settings__request {
+      @include alignment(flex-end, space-between, row, nowrap);
+      width: 100px;
+
+      .request__field {
+        width: inherit;
+        text-align: center;
+      }
+    }
+
+    .settings__app {
+      @include alignment(flex-end, space-between, row, nowrap);
+    }
+
+    .settings__language {
+      @include alignment(flex-end, space-between, row, nowrap);
+    }
+  }
+}

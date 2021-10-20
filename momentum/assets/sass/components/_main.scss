@@ -1,0 +1,24 @@
+.main {
+  @include alignment(space-between, center, row, wrap);
+  width: 100%;
+
+  .main__section {
+    @include alignment(center, center, column, nowrap);
+
+    .section__greeting {
+      @include alignment(center, center, column, nowrap);
+
+      .greeting__name {
+        text-align: center;
+      }
+    }
+
+    .section__focus {
+      @include alignment(center, center, column, nowrap);
+
+      .focus__text {
+        text-align: center;
+      }
+    }
+  }
+}

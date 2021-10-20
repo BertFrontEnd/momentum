@@ -1,0 +1,23 @@
+.header {
+  @include alignment(space-between, space-between, row, wrap);
+  width: 100%;
+
+  .header__audio {
+    @include alignment(flex-start, flex-start, column, nowrap);
+    width: 250px;
+  }
+
+  .header__city {
+    @include alignment(flex-start, center, column, nowrap);
+
+    .city__location {
+      width: 200px;
+      text-align: center;
+    }
+  }
+
+  .header__weather {
+    @include alignment(flex-start, flex-end, column, nowrap);
+    width: 250px;
+  }
+}

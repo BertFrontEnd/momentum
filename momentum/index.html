@@ -11,184 +11,189 @@
     <title>Momentum</title>
   </head>
   <body>
-    <header class="header">
-      <section class="header__audio">
-        <div class="audio__direction">
-          <span class="direction__button button--prev">Prev</span>
-          <span class="direction__button button--play">Play</span>
-          <span class="direction__button button--next">Next</span>
-        </div>
-        <div class="audio__volume">
-          <button class="volume__min">Min</button>
-          <input
-            type="range"
-            class="volume__level"
-            min="0"
-            max="100"
-            value="50"
-          />
-          <button class="volume__max">Max</button>
-        </div>
-        <div class="audio__duration">
-          <span class="duration__min">00:00</span>
-          <input
-            type="range"
-            class="duration__level"
-            min="0"
-            max="100"
-            value="0"
-          />
-          <span class="duration__max">3:23</span>
-        </div>
-        <ul class="audio__play-list">
-          <li class="play-list__item item--active">Aqua Caelestis</li>
-          <li class="play-list__item">River Flows In You</li>
-          <li class="play-list__item">Summer Wind</li>
-          <li class="play-list__item">Ennio Morricone</li>
-        </ul>
-      </section>
-      <section class="header__weather">
-        <div class="weather__city">
-          <span class="city__title">Location</span>
+    <section class="wrapper">
+      <header class="header">
+        <section class="header__audio">
+          <div class="audio__direction">
+            <span class="direction__button button--prev">Prev</span>
+            <span class="direction__button button--play">Play</span>
+            <span class="direction__button button--next">Next</span>
+          </div>
+          <div class="audio__volume">
+            <button class="volume__min">Min</button>
+            <input
+              type="range"
+              class="volume__level"
+              min="0"
+              max="100"
+              value="50"
+            />
+            <button class="volume__max">Max</button>
+          </div>
+          <div class="audio__duration">
+            <span class="duration__min">00:00</span>
+            <input
+              type="range"
+              class="duration__level"
+              min="0"
+              max="100"
+              value="0"
+            />
+            <span class="duration__max">3:23</span>
+          </div>
+          <ul class="audio__play-list">
+            <li class="play-list__item item--active">Aqua Caelestis</li>
+            <li class="play-list__item">River Flows In You</li>
+            <li class="play-list__item">Summer Wind</li>
+            <li class="play-list__item">Ennio Morricone</li>
+          </ul>
+        </section>
+        <section class="header__city">
+          <span class="city__title">Location:</span>
           <input
             type="text"
             class="city__location"
             placeholder="[Enter Your Location]"
+            value="Minsk"
           />
-        </div>
-        <div class="weather__forecast">
-          <span class="forecast__description">7°, light rain</span>
-        </div>
-        <div class="weather__feels">
-          <span class="feels__description">Feels: 3°</span>
-        </div>
-        <div class="weather__wind">
-          <span class="wind__description">Wind: 8.12 m/s</span>
-        </div>
-        <div class="weather__humidity">
-          <span class="humidity__description">Humidity: 90%</span>
-        </div>
-      </section>
-    </header>
-    <main class="main">
-      <section class="main__arrow arrow--left">‹</section>
-      <section class="main__section">
-        <div class="section__time">
-          <time class="time__current">14:45:54</time>
-        </div>
-        <div class="section__date">
-          <span class="date__current">Wednesday, October 20</span>
-        </div>
-        <div class="section__greeting">
-          <span class="greeting__title">Good afternoon</span>
-          <input
-            type="text"
-            class="greeting__name"
-            placeholder="[Enter Your Name]"
-          />
-        </div>
-        <div class="section__focus">
-          <span class="focus__title">What Is Your Focus For Now?</span>
-          <input
-            type="text"
-            class="focus__text"
-            placeholder="[Enter Your Focus]"
-          />
-        </div>
-      </section>
-      <section class="main__arrow arrow--right">›</section>
-    </main>
-    <footer class="footer">
-      <ul class="footer__todo">
-        <li>
-          <button class="todo__button button--check">✓</button>
-          <span>Task #1</span
-          ><button class="todo__button button--remove">🗙</button>
-        </li>
-        <li>
-          <button class="todo__button button--check">✓</button>
-          <span>Task #2</span
-          ><button class="todo__button button--remove">🗙</button>
-        </li>
-        <li>
-          <button class="todo__button button--check">✓</button>
-          <span>Task #3</span
-          ><button class="todo__button button--remove">🗙</button>
-        </li>
-        <li>
-          <button class="todo__button button--check">✓</button>
-          <span>Task #4</span
-          ><button class="todo__button button--remove">🗙</button>
-        </li>
-        <li>
-          <button class="todo__button button--check">✓</button>
-          <span>Task #5</span
-          ><button class="todo__button button--remove">🗙</button>
-        </li>
-      </ul>
-
-      <section class="footer__quote">
-        <span class="quote__text"
-          >"If you want things to be different, perhaps the answer is to become
-          different yourself."</span
-        >
-        <span class="quote__author">Norman Peale</span>
-        <button class="quote__button">🗘</button>
-      </section>
-      <section class="footer__settings">
-        <div class="settings__image">
-          <input type="radio" id="rsschool" name="source" />
-          <label for="rsschool" class="image__source source--rsschool"
-            >RSSchool API</label
-          >
-          <input type="radio" id="unsplach" name="source" />
-          <label for="unsplach" class="image__source source--unsplach"
-            >Unsplash API</label
-          >
-          <input type="radio" id="flickr" name="source" />
-          <label for="flickr" class="image__source source--flickr"
-            >Flickr API</label
-          >
-        </div>
-        <div class="settings__request">
-          <input
-            type="text"
-            class="request__field"
-            placeholder="Enter Your Tag"
-          />
-          <button class="request__button">🗘</button>
-        </div>
-        <ul class="settings__app">
+        </section>
+        <section class="header__weather">
+          <div class="weather__forecast">
+            <span class="forecast__description">7°, light rain</span>
+          </div>
+          <div class="weather__feels">
+            <span class="feels__description">Feels: 3°</span>
+          </div>
+          <div class="weather__wind">
+            <span class="wind__description">Wind: 8.12 m/s</span>
+          </div>
+          <div class="weather__humidity">
+            <span class="humidity__description">Humidity: 90%</span>
+          </div>
+        </section>
+      </header>
+      <main class="main">
+        <section class="main__arrow arrow--left">‹</section>
+        <section class="main__section">
+          <div class="section__time">
+            <time class="time__current">14:45:54</time>
+          </div>
+          <div class="section__date">
+            <span class="date__current">Wednesday, October 20</span>
+          </div>
+          <div class="section__greeting">
+            <span class="greeting__title">Good afternoon, </span>
+            <input
+              type="text"
+              class="greeting__name"
+              placeholder="[Enter Your Name]"
+            />
+          </div>
+          <div class="section__focus">
+            <span class="focus__title">What Is Your Focus For Now?</span>
+            <input
+              type="text"
+              class="focus__text"
+              placeholder="[Enter Your Focus]"
+            />
+          </div>
+        </section>
+        <section class="main__arrow arrow--right">›</section>
+      </main>
+      <footer class="footer">
+        <ul class="footer__todo">
           <li>
-            <input type="checkbox" id="audio" />
-            <label for="audio" class="app__button button--audio">Audio</label>
+            <button class="todo__button button--check">✓</button>
+            <span>Task #1</span
+            ><button class="todo__button button--remove">🗙</button>
           </li>
           <li>
-            <input type="checkbox" id="weather" />
-            <label for="weather" class="app__button button--weather"
-              >Weather</label
-            >
+            <button class="todo__button button--check">✓</button>
+            <span>Task #2</span
+            ><button class="todo__button button--remove">🗙</button>
           </li>
           <li>
-            <input type="checkbox" id="main" />
-            <label for="main" class="app__button button--main">Main</label>
+            <button class="todo__button button--check">✓</button>
+            <span>Task #3</span
+            ><button class="todo__button button--remove">🗙</button>
           </li>
           <li>
-            <input type="checkbox" id="todo" />
-            <label for="todo" class="app__button button--todo">ToDo</label>
+            <button class="todo__button button--check">✓</button>
+            <span>Task #4</span
+            ><button class="todo__button button--remove">🗙</button>
           </li>
           <li>
-            <input type="checkbox" id="quote" />
-            <label for="quote" class="app__button button--quote">Quote</label>
-          </li>
-          <li>
-            <input type="checkbox" id="language" checked />
-            <label for="language" class="app__button button--language"
-              >Ru</label
-            >
+            <button class="todo__button button--check">✓</button>
+            <span>Task #5</span
+            ><button class="todo__button button--remove">🗙</button>
           </li>
         </ul>
-      </section>
-    </footer>
+        <section class="footer__quote">
+          <span class="quote__text"
+            >"If you want things to be different, perhaps the answer is to
+            become different yourself."</span
+          >
+          <span class="quote__author">Norman Peale</span>
+          <button class="quote__button">🗘</button>
+        </section>
+        <section class="footer__settings">
+          <div class="settings__image">
+            <input type="radio" id="github" name="source" checked />
+            <label for="github" class="image__source source--github">G</label>
+            <input type="radio" id="unsplach" name="source" />
+            <label for="unsplach" class="image__source source--unsplach"
+              >U</label
+            >
+            <input type="radio" id="flickr" name="source" />
+            <label for="flickr" class="image__source source--flickr">F</label>
+          </div>
+          <div class="settings__request">
+            <input type="text" class="request__field" placeholder="Request" />
+            <button class="request__button">🗘</button>
+          </div>
+          <ul class="settings__app">
+            <li>
+              <input type="checkbox" id="audio" checked />
+              <label for="audio" class="app__button button--audio">A</label>
+            </li>
+            <li>
+              <input type="checkbox" id="location" checked />
+              <label for="location" class="app__button button--location"
+                >L</label
+              >
+            </li>
+
+            <li>
+              <input type="checkbox" id="main" checked />
+              <label for="main" class="app__button button--main">M</label>
+            </li>
+          </ul>
+          <ul class="settings__app">
+            <li>
+              <input type="checkbox" id="todo" checked />
+              <label for="todo" class="app__button button--todo">T</label>
+            </li>
+            <li>
+              <input type="checkbox" id="quote" checked />
+              <label for="quote" class="app__button button--quote">Q</label>
+            </li>
+            <li>
+              <input type="checkbox" id="weather" checked />
+              <label for="weather" class="app__button button--weather">W</label>
+            </li>
+          </ul>
+          <ul class="settings__language">
+            <li>
+              <input type="radio" id="en" name="language" checked />
+              <label for="en" class="language__button button--en">En</label>
+            </li>
+            <li>
+              <input type="radio" id="ru" name="language" />
+              <label for="ru" class="language__button button--ru">Ru</label>
+            </li>
+          </ul>
+        </section>
+      </footer>
+    </section>
   </body>
 </html>

@@ -1,0 +1,13 @@
+// Abstract
+@import './assets/sass/abstract/constants';
+@import './assets/sass/abstract/discard';
+@import './assets/sass/abstract/mixins';
+@import './assets/sass/abstract/placeholders';
+
+// Base
+@import './assets/sass/base/base';
+
+// Main components
+@import './assets/sass/components/header';
+@import './assets/sass/components/main';
+@import './assets/sass/components/footer';

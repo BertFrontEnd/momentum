@@ -1,0 +1,19 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  padding: 10px;
+  font-family: 'Lato', Verdana, sans-serif;
+  font-size: 1.6rem;
+  background-image: url(./assets/images/background/overlay.png);
+  background-size: cover;
+  background-position: center;
+  @extend %transition;
+}
+
+.wrapper {
+  @include alignment(space-between, space-between, column, nowrap);
+  height: calc(100vh - 20px);
+  width: 100%;
+}
