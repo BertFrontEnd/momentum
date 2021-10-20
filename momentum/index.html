@@ -50,9 +50,11 @@
       <section class="header__weather">
         <div class="weather__city">
           <span class="city__title">Location</span>
-          <span class="city__location" contenteditable="true"
-            >[Enter Location]</span
-          >
+          <input
+            type="text"
+            class="city__location"
+            placeholder="[Enter Location]"
+          />
         </div>
         <div class="weather__forecast">
           <span class="forecast__description">7°, light rain</span>
@@ -69,9 +71,32 @@
       </section>
     </header>
     <main class="main">
-      <section class="main__arrow arrow--left"></section>
-      <section class="main__description"></section>
-      <section class="main__arrow arrow--right"></section>
+      <section class="main__arrow arrow--left">‹</section>
+      <section class="main__section">
+        <div class="section__time">
+          <time class="time__current">14:45:54</time>
+        </div>
+        <div class="section__date">
+          <date class="date__current">Wednesday, October 20</date>
+        </div>
+        <div class="section__greeting">
+          <span class="greeting__title">Good afternoon</span>
+          <input
+            type="text"
+            class="greeting__name"
+            placeholder="[Enter Your Name]"
+          />
+        </div>
+        <div class="section__focus">
+          <span class="focus__title">What Is Your Focus For Now?</span>
+          <input
+            type="text"
+            class="focus__text"
+            placeholder="[Enter Your Focus]"
+          />
+        </div>
+      </section>
+      <section class="main__arrow arrow--right">›</section>
     </main>
     <footer class="footer">
       <section class="footer__todo"></section>
