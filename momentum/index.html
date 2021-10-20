@@ -60,7 +60,7 @@
           <span class="forecast__description">7°, light rain</span>
         </div>
         <div class="weather__feels">
-          <span class="feels__description">Feels: 3°</ы>
+          <span class="feels__description">Feels: 3°</span>
         </div>
         <div class="weather__wind">
           <span class="wind__description">Wind: 8.12 m/s</span>
@@ -77,7 +77,7 @@
           <time class="time__current">14:45:54</time>
         </div>
         <div class="section__date">
-          <date class="date__current">Wednesday, October 20</date>
+          <span class="date__current">Wednesday, October 20</span>
         </div>
         <div class="section__greeting">
           <span class="greeting__title">Good afternoon</span>
@@ -99,35 +99,34 @@
       <section class="main__arrow arrow--right">›</section>
     </main>
     <footer class="footer">
-      <section class="footer__todo">
-        <ul class="todo__list">
-          <li>
-            <button class="list__button button--check">✓</button>
-            <span>Task #1</span
-            ><button class="list__button button--remove">🗙</button>
-          </li>
-          <li>
-            <button class="list__button button--check">✓</button>
-            <span>Task #2</span
-            ><button class="list__button button--remove">🗙</button>
-          </li>
-          <li>
-            <button class="list__button button--check">✓</button>
-            <span>Task #3</span
-            ><button class="list__button button--remove">🗙</button>
-          </li>
-          <li>
-            <button class="list__button button--check">✓</button>
-            <span>Task #4</span
-            ><button class="list__button button--remove">🗙</button>
-          </li>
-          <li>
-            <button class="list__button button--check">✓</button>
-            <span>Task #5</span
-            ><button class="list__button button--remove">🗙</button>
-          </li>
-        </ul>
-      </section>
+      <ul class="footer__todo">
+        <li>
+          <button class="todo__button button--check">✓</button>
+          <span>Task #1</span
+          ><button class="todo__button button--remove">🗙</button>
+        </li>
+        <li>
+          <button class="todo__button button--check">✓</button>
+          <span>Task #2</span
+          ><button class="todo__button button--remove">🗙</button>
+        </li>
+        <li>
+          <button class="todo__button button--check">✓</button>
+          <span>Task #3</span
+          ><button class="todo__button button--remove">🗙</button>
+        </li>
+        <li>
+          <button class="todo__button button--check">✓</button>
+          <span>Task #4</span
+          ><button class="todo__button button--remove">🗙</button>
+        </li>
+        <li>
+          <button class="todo__button button--check">✓</button>
+          <span>Task #5</span
+          ><button class="todo__button button--remove">🗙</button>
+        </li>
+      </ul>
+
       <section class="footer__quote">
         <span class="quote__text"
           >"If you want things to be different, perhaps the answer is to become
@@ -136,7 +135,60 @@
         <span class="quote__author">Norman Peale</span>
         <button class="quote__button">🗘</button>
       </section>
-      <section class="footer__settings"></section>
+      <section class="footer__settings">
+        <div class="settings__image">
+          <input type="radio" id="rsschool" name="source" />
+          <label for="rsschool" class="image__source source--rsschool"
+            >RSSchool API</label
+          >
+          <input type="radio" id="unsplach" name="source" />
+          <label for="unsplach" class="image__source source--unsplach"
+            >Unsplash API</label
+          >
+          <input type="radio" id="flickr" name="source" />
+          <label for="flickr" class="image__source source--flickr"
+            >Flickr API</label
+          >
+        </div>
+        <div class="settings__request">
+          <input
+            type="text"
+            class="request__field"
+            placeholder="Enter Your Tag"
+          />
+          <button class="request__button">🗘</button>
+        </div>
+        <ul class="settings__app">
+          <li>
+            <input type="checkbox" id="audio" />
+            <label for="audio" class="app__button button--audio">Audio</label>
+          </li>
+          <li>
+            <input type="checkbox" id="weather" />
+            <label for="weather" class="app__button button--weather"
+              >Weather</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="main" />
+            <label for="main" class="app__button button--main">Main</label>
+          </li>
+          <li>
+            <input type="checkbox" id="todo" />
+            <label for="todo" class="app__button button--todo">ToDo</label>
+          </li>
+          <li>
+            <input type="checkbox" id="quote" />
+            <label for="quote" class="app__button button--quote">Quote</label>
+          </li>
+          <li>
+            <input type="checkbox" id="language" checked />
+            <label for="language" class="app__button button--language"
+              >Ru</label
+            >
+          </li>
+        </ul>
+      </section>
     </footer>
   </body>
 </html>
