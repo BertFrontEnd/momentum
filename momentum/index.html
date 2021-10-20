@@ -19,7 +19,7 @@
           <span class="direction__button button--next">Next</span>
         </div>
         <div class="audio__volume">
-          <span class="volume__min">min</span>
+          <button class="volume__min">Min</button>
           <input
             type="range"
             class="volume__level"
@@ -27,7 +27,7 @@
             max="100"
             value="50"
           />
-          <span class="volume__max">min</span>
+          <button class="volume__max">Max</button>
         </div>
         <div class="audio__duration">
           <span class="duration__min">00:00</span>
@@ -53,20 +53,20 @@
           <input
             type="text"
             class="city__location"
-            placeholder="[Enter Location]"
+            placeholder="[Enter Your Location]"
           />
         </div>
         <div class="weather__forecast">
           <span class="forecast__description">7°, light rain</span>
         </div>
         <div class="weather__feels">
-          <div class="feels__description">Feels: 3°</div>
+          <span class="feels__description">Feels: 3°</ы>
         </div>
         <div class="weather__wind">
-          <div class="wind__description">Wind: 8.12 m/s</div>
+          <span class="wind__description">Wind: 8.12 m/s</span>
         </div>
         <div class="weather__humidity">
-          <div class="humidity__description">Humidity: 90%</div>
+          <span class="humidity__description">Humidity: 90%</span>
         </div>
       </section>
     </header>
@@ -99,8 +99,43 @@
       <section class="main__arrow arrow--right">›</section>
     </main>
     <footer class="footer">
-      <section class="footer__todo"></section>
-      <section class="footer__quote"></section>
+      <section class="footer__todo">
+        <ul class="todo__list">
+          <li>
+            <button class="list__button button--check">✓</button>
+            <span>Task #1</span
+            ><button class="list__button button--remove">🗙</button>
+          </li>
+          <li>
+            <button class="list__button button--check">✓</button>
+            <span>Task #2</span
+            ><button class="list__button button--remove">🗙</button>
+          </li>
+          <li>
+            <button class="list__button button--check">✓</button>
+            <span>Task #3</span
+            ><button class="list__button button--remove">🗙</button>
+          </li>
+          <li>
+            <button class="list__button button--check">✓</button>
+            <span>Task #4</span
+            ><button class="list__button button--remove">🗙</button>
+          </li>
+          <li>
+            <button class="list__button button--check">✓</button>
+            <span>Task #5</span
+            ><button class="list__button button--remove">🗙</button>
+          </li>
+        </ul>
+      </section>
+      <section class="footer__quote">
+        <span class="quote__text"
+          >"If you want things to be different, perhaps the answer is to become
+          different yourself."</span
+        >
+        <span class="quote__author">Norman Peale</span>
+        <button class="quote__button">🗘</button>
+      </section>
       <section class="footer__settings"></section>
     </footer>
   </body>
