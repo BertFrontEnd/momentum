@@ -3,42 +3,281 @@
   width: 100%;
 
   .footer__todo {
-    width: 250px;
+    min-width: 300px;
+
+    .todo__list {
+      @include alignment(space-between, center, row, wrap);
+      width: 100%;
+      opacity: 0.8;
+      @extend %transition;
+      cursor: pointer;
+
+      .todo__task {
+        cursor: pointer;
+      }
+
+      .todo__task--done,
+      .todo__button--checked,
+      .todo__remove--done {
+        font-weight: 900;
+        color: $todo-checked-color;
+      }
+
+      .todo__task--done {
+        text-decoration: line-through;
+      }
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+    }
   }
 
   .footer__quote {
     @include alignment(center, center, column, nowrap);
-    width: 400px;
+    width: 500px;
 
-    .quote__text {
+    .quote__text,
+    .quote__author {
       text-align: center;
+    }
+
+    .quote__author {
+      margin: 15px 0;
+    }
+
+    .quote__button {
+      width: 28px;
+      height: 28px;
+      mask-image: url('./assets/images/navigation/refresh.svg');
+      mask-size: contain;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      background-color: $background-color-icon;
+      opacity: 0.8;
+      @extend %transition;
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+    }
+
+    .quote__button--request {
+      animation: rotation 0.5s infinite linear;
     }
   }
 
   .footer__settings {
     @include alignment(flex-start, flex-end, column, nowrap);
-    width: 250px;
+    min-width: 300px;
 
     .settings__image {
       @include alignment(flex-end, space-between, row, nowrap);
+      column-gap: 10px;
+      margin-bottom: 20px;
+
+      #github {
+        &:checked {
+          ~ .image__source--github {
+            opacity: 1;
+            background-color: $settings-checked-color;
+          }
+        }
+      }
+
+      #unsplash {
+        &:checked {
+          ~ .image__source--unsplash {
+            opacity: 1;
+            background-color: $settings-checked-color;
+          }
+        }
+      }
+
+      #flickr {
+        &:checked {
+          ~ .image__source--flickr {
+            opacity: 1;
+            background-color: $settings-checked-color;
+          }
+        }
+      }
+
+      .image__source {
+        width: 24px;
+        height: 24px;
+        border-radius: 2px;
+        text-align: center;
+        opacity: 0.8;
+        background-position: center;
+        background-size: 70% 70%;
+        background-repeat: no-repeat;
+        background-color: $background-color-settings;
+        @extend %transition;
+
+        &:hover {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+      }
+
+      .image__source--github {
+        background-image: url('./assets/images/api/github.svg');
+      }
+
+      .image__source--unsplash {
+        background-image: url('./assets/images/api/unsplash.svg');
+      }
+
+      .image__source--flickr {
+        background-image: url('./assets/images/api/flickr.svg');
+      }
     }
 
     .settings__request {
-      @include alignment(flex-end, space-between, row, nowrap);
-      width: 100px;
+      @include alignment(flex-end, center, row, nowrap);
+      column-gap: 10px;
+      width: 130px;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
 
       .request__field {
         width: inherit;
+        padding: 5px;
         text-align: center;
+        border-radius: 2px;
+        background-color: $background-color-request;
+      }
+
+      .request__button {
+        width: 20px;
+        height: 20px;
+        mask-image: url('./assets/images/navigation/refresh.svg');
+        mask-size: contain;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        background-color: $background-color-icon;
+        opacity: 0.8;
+        @extend %transition;
+
+        &:hover {
+          opacity: 1;
+          transform: scale(1.05);
+        }
       }
     }
 
     .settings__app {
       @include alignment(flex-end, space-between, row, nowrap);
+      column-gap: 10px;
+      margin-bottom: 20px;
+
+      input[type='checkbox'] {
+        &:checked {
+          ~ .app__button {
+            opacity: 1;
+            background-color: $settings-checked-color;
+          }
+        }
+      }
+
+      .app__button {
+        display: block;
+        width: 24px;
+        height: 24px;
+        border-radius: 2px;
+        text-align: center;
+        opacity: 0.8;
+        background-position: center;
+        background-size: 70% 70%;
+        background-repeat: no-repeat;
+        background-color: $background-color-settings;
+        @extend %transition;
+
+        &:hover {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+      }
+
+      .app__button--audio {
+        background-image: url('./assets/images/navigation/audio.svg');
+      }
+
+      .app__button--city {
+        background-image: url('./assets/images/navigation/city.svg');
+      }
+
+      .app__button--weather {
+        background-image: url('./assets/images/navigation/weather.svg');
+      }
+
+      .app__button--time {
+        background-image: url('./assets/images/navigation/time.svg');
+      }
+
+      .app__button--todo {
+        background-image: url('./assets/images/navigation/todo.svg');
+      }
+
+      .app__button--quote {
+        background-image: url('./assets/images/navigation/quote.svg');
+      }
     }
 
     .settings__language {
       @include alignment(flex-end, space-between, row, nowrap);
+      column-gap: 10px;
+      font-size: 1.2rem;
+      line-height: 2.4rem;
+
+      #en {
+        &:checked {
+          ~ .language__button--en {
+            opacity: 1;
+            background-color: $settings-checked-color;
+          }
+        }
+      }
+
+      #ru {
+        &:checked {
+          ~ .language__button--ru {
+            opacity: 1;
+            background-color: $settings-checked-color;
+          }
+        }
+      }
+
+      .language__button {
+        display: block;
+        width: 24px;
+        height: 24px;
+        border-radius: 2px;
+        text-align: center;
+        opacity: 0.8;
+        background-position: center;
+        background-size: 70% 70%;
+        background-repeat: no-repeat;
+        background-color: $background-color-settings;
+        @extend %transition;
+
+        &:hover {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+      }
     }
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
   }
 }

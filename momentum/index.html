@@ -107,30 +107,30 @@
       </main>
       <footer class="footer">
         <ul class="footer__todo">
-          <li>
-            <button class="todo__button button--check">✓</button>
-            <span>Task #1</span
-            ><button class="todo__button button--remove">🗙</button>
+          <li class="todo__list todo__list--checked">
+            <button class="todo__button todo__button--checked">✓</button>
+            <span class="todo__task todo__task--done">Contact the manager</span
+            ><button class="todo__remove todo__remove--done">🗙</button>
           </li>
-          <li>
-            <button class="todo__button button--check">✓</button>
-            <span>Task #2</span
-            ><button class="todo__button button--remove">🗙</button>
+          <li class="todo__list">
+            <button class="todo__button">✓</button>
+            <span class="todo__task">Check the contract</span
+            ><button class="todo__remove">🗙</button>
           </li>
-          <li>
-            <button class="todo__button button--check">✓</button>
-            <span>Task #3</span
-            ><button class="todo__button button--remove">🗙</button>
+          <li class="todo__list">
+            <button class="todo__button">✓</button>
+            <span class="todo__task">Meeting with the Client</span
+            ><button class="todo__remove">🗙</button>
           </li>
-          <li>
-            <button class="todo__button button--check">✓</button>
-            <span>Task #4</span
-            ><button class="todo__button button--remove">🗙</button>
+          <li class="todo__list">
+            <button class="todo__button">✓</button>
+            <span class="todo__task">Check tables</span
+            ><button class="todo__remove">🗙</button>
           </li>
-          <li>
-            <button class="todo__button button--check">✓</button>
-            <span>Task #5</span
-            ><button class="todo__button button--remove">🗙</button>
+          <li class="todo__list">
+            <button class="todo__button">✓</button>
+            <span class="todo__task">To make a report</span
+            ><button class="todo__remove">🗙</button>
           </li>
         </ul>
         <section class="footer__quote">
@@ -139,18 +139,25 @@
             become different yourself."</span
           >
           <span class="quote__author">Norman Peale</span>
-          <button class="quote__button">🗘</button>
+          <button class="quote__button"></button>
         </section>
         <section class="footer__settings">
           <div class="settings__image">
             <input type="radio" id="github" name="source" checked />
-            <label for="github" class="image__source source--github">G</label>
-            <input type="radio" id="unsplach" name="source" />
-            <label for="unsplach" class="image__source source--unsplach"
-              >U</label
-            >
+            <input type="radio" id="unsplash" name="source" />
             <input type="radio" id="flickr" name="source" />
-            <label for="flickr" class="image__source source--flickr">F</label>
+            <label
+              for="github"
+              class="image__source image__source--github"
+            ></label>
+            <label
+              for="unsplash"
+              class="image__source image__source--unsplash"
+            ></label>
+            <label
+              for="flickr"
+              class="image__source image__source--flickr"
+            ></label>
           </div>
           <div class="settings__request">
             <input type="text" class="request__field" placeholder="Request" />
@@ -159,42 +166,44 @@
           <ul class="settings__app">
             <li>
               <input type="checkbox" id="audio" checked />
-              <label for="audio" class="app__button button--audio">A</label>
+              <label for="audio" class="app__button app__button--audio"></label>
             </li>
             <li>
-              <input type="checkbox" id="location" checked />
-              <label for="location" class="app__button button--location"
-                >L</label
-              >
-            </li>
-
-            <li>
-              <input type="checkbox" id="main" checked />
-              <label for="main" class="app__button button--main">M</label>
-            </li>
-          </ul>
-          <ul class="settings__app">
-            <li>
-              <input type="checkbox" id="todo" checked />
-              <label for="todo" class="app__button button--todo">T</label>
-            </li>
-            <li>
-              <input type="checkbox" id="quote" checked />
-              <label for="quote" class="app__button button--quote">Q</label>
+              <input type="checkbox" id="city" checked />
+              <label for="city" class="app__button app__button--city"></label>
             </li>
             <li>
               <input type="checkbox" id="weather" checked />
-              <label for="weather" class="app__button button--weather">W</label>
+              <label
+                for="weather"
+                class="app__button app__button--weather"
+              ></label>
+            </li>
+            <li>
+              <input type="checkbox" id="time" checked />
+              <label for="time" class="app__button app__button--time"></label>
+            </li>
+            <li>
+              <input type="checkbox" id="todo" checked />
+              <label for="todo" class="app__button app__button--todo"></label>
+            </li>
+            <li>
+              <input type="checkbox" id="quote" checked />
+              <label for="quote" class="app__button app__button--quote"></label>
             </li>
           </ul>
           <ul class="settings__language">
             <li>
               <input type="radio" id="en" name="language" checked />
-              <label for="en" class="language__button button--en">En</label>
+              <label for="en" class="language__button language__button--en"
+                >En</label
+              >
             </li>
             <li>
               <input type="radio" id="ru" name="language" />
-              <label for="ru" class="language__button button--ru">Ru</label>
+              <label for="ru" class="language__button language__button--ru"
+                >Ru</label
+              >
             </li>
           </ul>
         </section>
