@@ -286,7 +286,7 @@ body {
 .header .header__audio .audio__play-list .play-list__item,
 .header .header__audio .audio__play-list .play-list__item--active {
   position: relative;
-  padding: 5px;
+  margin: 5px 5px 5px 0;
   padding-left: 20px;
   opacity: 0.8;
   cursor: pointer;
