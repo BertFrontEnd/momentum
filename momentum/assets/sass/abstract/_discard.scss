@@ -2,5 +2,31 @@ button,
 input {
   border: none;
   outline: none;
+  color: $text-color-main;
   background-color: transparent;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+span,
+time,
+.play-list__item {
+  cursor: default;
+}
+
+input[type='range'] {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+
+  &::-webkit-slider-thumb {
+    opacity: 0;
+  }
+
+  &::-webkit-slider-runnable-track {
+    height: 3px;
+  }
 }

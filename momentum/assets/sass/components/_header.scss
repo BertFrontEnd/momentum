@@ -4,7 +4,154 @@
 
   .header__audio {
     @include alignment(flex-start, flex-start, column, nowrap);
-    width: 250px;
+    width: 180px;
+
+    .audio__direction {
+      @include alignment(center, center, row, wrap);
+      column-gap: 20px;
+      width: inherit;
+      margin-bottom: 10px;
+
+      .direction__button {
+        width: 32px;
+        height: 32px;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        margin-bottom: 10px;
+        background-color: $background-color-icon;
+        opacity: 0.8;
+        @extend %transition;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .button--prev {
+        mask-image: url('./assets/images/navigation/play-prev.svg');
+      }
+
+      .button--play {
+        width: 40px;
+        height: 40px;
+        mask-image: url('./assets/images/navigation/play.svg');
+      }
+
+      .button--next {
+        mask-image: url('./assets/images/navigation/play-next.svg');
+      }
+    }
+
+    .audio__volume {
+      position: relative;
+      @include alignment(space-between, center, row, nowrap);
+      width: 100%;
+
+      .volume__button {
+        width: 22px;
+        height: 22px;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        background-color: $background-color-icon;
+        opacity: 0.8;
+        @extend %transition;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .volume--min {
+        mask-image: url('./assets/images/navigation/volume-mute.svg');
+      }
+
+      .volume--max {
+        mask-image: url('./assets/images/navigation/volume-high.svg');
+      }
+
+      .volume__range {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .audio__current {
+      width: 100%;
+      margin: 10px 0;
+
+      .current__track {
+        vertical-align: middle;
+      }
+    }
+
+    .audio__duration {
+      position: relative;
+      @include alignment(space-between, center, row, nowrap);
+      width: 100%;
+      height: 15px;
+      margin-bottom: 20px;
+
+      .duration__time {
+        width: 30px;
+        font-size: 1rem;
+      }
+
+      .duration--min {
+        text-align: left;
+      }
+
+      .duration--max {
+        text-align: right;
+      }
+
+      .duration__range {
+        width: 100px;
+      }
+
+      .duration__range {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .audio__play-list {
+      .play-list__item,
+      .play-list__item--active {
+        position: relative;
+        padding: 5px;
+        padding-left: 20px;
+        opacity: 0.8;
+        @extend %transition;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &::before {
+          position: absolute;
+          content: '\2713';
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      .play-list__item--active {
+        &::before {
+          font-weight: 900;
+          color: $current-check-track-color;
+        }
+      }
+    }
   }
 
   .header__city {
@@ -17,7 +164,21 @@
   }
 
   .header__weather {
+    position: relative;
     @include alignment(flex-start, flex-end, column, nowrap);
-    width: 250px;
+    width: 180px;
+
+    &::before {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      content: '';
+      background-image: url('./assets/images/weather/icon-weather.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      left: 0;
+      top: 0;
+    }
   }
 }

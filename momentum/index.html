@@ -15,34 +15,39 @@
       <header class="header">
         <section class="header__audio">
           <div class="audio__direction">
-            <span class="direction__button button--prev">Prev</span>
-            <span class="direction__button button--play">Play</span>
-            <span class="direction__button button--next">Next</span>
+            <button class="direction__button button--prev"></button>
+            <button class="direction__button button--play"></button>
+            <button class="direction__button button--next"></button>
           </div>
           <div class="audio__volume">
-            <button class="volume__min">Min</button>
+            <button class="volume__button volume--min"></button>
             <input
               type="range"
-              class="volume__level"
+              class="volume__range"
               min="0"
               max="100"
               value="50"
             />
-            <button class="volume__max">Max</button>
+            <button class="volume__button volume--max"></button>
+          </div>
+          <div class="audio__current">
+            <marquee class="current__track">Current Track</marquee>
           </div>
           <div class="audio__duration">
-            <span class="duration__min">00:00</span>
+            <span class="duration__time duration--min">00:00</span>
             <input
               type="range"
-              class="duration__level"
+              class="duration__range"
               min="0"
               max="100"
               value="0"
             />
-            <span class="duration__max">3:23</span>
+            <span class="duration__time duration--max">03:23</span>
           </div>
           <ul class="audio__play-list">
-            <li class="play-list__item item--active">Aqua Caelestis</li>
+            <li class="play-list__item play-list__item--active">
+              Aqua Caelestis
+            </li>
             <li class="play-list__item">River Flows In You</li>
             <li class="play-list__item">Summer Wind</li>
             <li class="play-list__item">Ennio Morricone</li>
@@ -73,7 +78,7 @@
         </section>
       </header>
       <main class="main">
-        <section class="main__arrow arrow--left">‹</section>
+        <button class="main__arrow arrow--left">‹</button>
         <section class="main__section">
           <div class="section__time">
             <time class="time__current">14:45:54</time>
@@ -98,7 +103,7 @@
             />
           </div>
         </section>
-        <section class="main__arrow arrow--right">›</section>
+        <button class="main__arrow arrow--right">›</button>
       </main>
       <footer class="footer">
         <ul class="footer__todo">
