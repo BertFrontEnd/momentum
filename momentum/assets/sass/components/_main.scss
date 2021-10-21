@@ -2,11 +2,51 @@
   @include alignment(space-between, center, row, wrap);
   width: 100%;
 
+  .main__arrow {
+    width: 32px;
+    height: 32px;
+    mask-position: center0;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: $background-color-icon;
+    opacity: 0.8;
+    @extend %transition;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .arrow--left {
+    mask-image: url('./assets/images/navigation/left.svg');
+  }
+
+  .arrow--right {
+    mask-image: url('./assets/images/navigation/right.svg');
+  }
+
   .main__section {
     @include alignment(center, center, column, nowrap);
 
+    .section__time {
+      @include alignment(center, center, column, nowrap);
+      width: 400px;
+      /* margin-bottom: 10px; */
+      font-size: 10rem;
+      line-height: 10rem;
+    }
+
+    .section__date {
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+    }
+
     .section__greeting {
       @include alignment(center, center, column, nowrap);
+      margin-bottom: 20px;
+      font-size: 4rem;
+      line-height: 4rem;
 
       .greeting__name {
         text-align: center;
@@ -15,6 +55,8 @@
 
     .section__focus {
       @include alignment(center, center, column, nowrap);
+      font-size: 2rem;
+      line-height: 2rem;
 
       .focus__text {
         text-align: center;
