@@ -84,6 +84,7 @@ body {
   background-image: url(./assets/images/background/overlay.jpg);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   background-blend-mode: multiply;
   height: 100vh;
   width: 100%;
@@ -1146,43 +1147,16 @@ body {
     min-width: 200px;
   }
   .footer .footer__settings .settings__image {
-    -webkit-column-gap: 5px;
-            column-gap: 5px;
     margin-bottom: 10px;
-  }
-  .footer .footer__settings .settings__image .image__source {
-    width: 20px;
-    height: 20px;
   }
   .footer .footer__settings .settings__request {
-    -webkit-column-gap: 5px;
-            column-gap: 5px;
-    width: 100px;
     margin-bottom: 10px;
-    font-size: 1rem;
-  }
-  .footer .footer__settings .settings__request .request__button {
-    width: 20px;
-    height: 20px;
   }
   .footer .footer__settings .settings__app {
-    -webkit-column-gap: 5px;
-            column-gap: 5px;
     margin-bottom: 10px;
   }
-  .footer .footer__settings .settings__app .app__button {
-    width: 20px;
-    height: 20px;
-  }
   .footer .footer__settings .settings__language {
-    -webkit-column-gap: 5px;
-            column-gap: 5px;
-    font-size: 1rem;
-    line-height: 2.2rem;
-  }
-  .footer .footer__settings .settings__language .language__button {
-    width: 20px;
-    height: 20px;
+    margin-bottom: 20px;
   }
 }
 
