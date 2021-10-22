@@ -1,0 +1,75 @@
+@media (max-width: $tablet) {
+  .header {
+    .header__audio {
+      width: 160px;
+
+      .audio__direction {
+        column-gap: 14px;
+        margin-bottom: 5px;
+
+        .direction__button {
+          width: 28px;
+          height: 28px;
+        }
+
+        .button--play {
+          width: 38px;
+          height: 38px;
+        }
+      }
+
+      .audio__volume {
+        .volume__button {
+          width: 18px;
+          height: 18px;
+        }
+
+        .volume__range {
+          width: 90px;
+        }
+      }
+
+      .audio__current {
+        margin: 5px 0;
+
+        .current__track {
+          font-size: 1.4rem;
+        }
+      }
+
+      .audio__duration {
+        margin-bottom: 10px;
+
+        .duration__time {
+          width: 25px;
+          font-size: 0.8rem;
+        }
+
+        .duration__range {
+          width: 90px;
+        }
+      }
+
+      .audio__play-list {
+        .play-list__item {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    .header__city {
+      font-size: 1.4rem;
+    }
+
+    .header__weather {
+      width: 160px;
+      font-size: 1.4rem;
+
+      &::before {
+        position: absolute;
+        width: 46px;
+        height: 46px;
+      }
+    }
+  }
+}

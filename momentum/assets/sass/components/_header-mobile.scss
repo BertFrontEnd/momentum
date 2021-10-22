@@ -1,0 +1,12 @@
+@media (max-width: $mobile) {
+  .header {
+    @include alignment(center, center, row, wrap);
+    column-gap: 20px;
+    row-gap: 20px;
+
+    .header__audio {
+      width: 160px;
+      /* margin: 0 150px; */
+    }
+  }
+}

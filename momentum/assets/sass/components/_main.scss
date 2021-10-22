@@ -1,5 +1,6 @@
 .main {
-  @include alignment(space-between, center, row, wrap);
+  @include alignment(space-between, center, row, nowrap);
+  column-gap: 20px;
   width: 100%;
 
   .main__arrow {
@@ -34,7 +35,7 @@
 
     .section__time {
       @include alignment(center, center, column, nowrap);
-      width: 400px;
+      /* width: 400px; */
       font-size: 10rem;
       line-height: 10rem;
     }
@@ -51,7 +52,12 @@
       font-size: 4rem;
       line-height: 4rem;
 
+      .greeting__title {
+        text-align: center;
+      }
+
       .greeting__name {
+        width: 370px;
         text-align: center;
       }
     }
@@ -61,7 +67,12 @@
       font-size: 2rem;
       line-height: 3rem;
 
+      .focus__title {
+        text-align: center;
+      }
+
       .focus__text {
+        width: 190px;
         text-align: center;
       }
     }

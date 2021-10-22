@@ -1,0 +1,28 @@
+@media (max-width: $mobile) {
+  .footer {
+    @include alignment(center, center, column, nowrap);
+    row-gap: 20px;
+
+    .footer__todo {
+      width: 250px;
+
+      .todo__list {
+        .todo__task {
+          width: 180px;
+        }
+      }
+    }
+
+    .footer__quote {
+      width: 250px;
+
+      .quote__author {
+        margin: 5px 0;
+      }
+    }
+
+    .footer__settings {
+      @include alignment(center, center, column, nowrap);
+    }
+  }
+}

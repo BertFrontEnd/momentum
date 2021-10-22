@@ -6,8 +6,15 @@
 
 // Base
 @import './assets/sass/base/base';
+@import './assets/sass/base/media';
 
 // Main components
 @import './assets/sass/components/header';
+@import './assets/sass/components/header-tablet';
+@import './assets/sass/components/header-mobile';
 @import './assets/sass/components/main';
+@import './assets/sass/components/main-tablet';
+@import './assets/sass/components/main-mobile';
 @import './assets/sass/components/footer';
+@import './assets/sass/components/footer-tablet';
+@import './assets/sass/components/footer-mobile';

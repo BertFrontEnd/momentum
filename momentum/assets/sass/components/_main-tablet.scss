@@ -1,0 +1,32 @@
+@media (max-width: $tablet) {
+  .main {
+    .main__arrow {
+      width: 28px;
+      height: 28px;
+    }
+
+    .main__section {
+      .section__time {
+        font-size: 8rem;
+        line-height: 8rem;
+      }
+
+      .section__date {
+        margin-bottom: 10px;
+        font-size: 2rem;
+        line-height: 2rem;
+      }
+
+      .section__greeting {
+        margin-bottom: 10px;
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+      }
+
+      .section__focus {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+      }
+    }
+  }
+}

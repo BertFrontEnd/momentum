@@ -1,0 +1,65 @@
+@media (max-width: $tablet) {
+  .footer {
+    .footer__todo {
+      width: 200px;
+      font-size: 1.4rem;
+    }
+
+    .footer__quote {
+      width: 200px;
+      font-size: 1.4rem;
+
+      .quote__button {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .footer__settings {
+      min-width: 200px;
+
+      .settings__image {
+        column-gap: 5px;
+        margin-bottom: 10px;
+
+        .image__source {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .settings__request {
+        column-gap: 5px;
+        width: 100px;
+        margin-bottom: 10px;
+        font-size: 1rem;
+
+        .request__button {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .settings__app {
+        column-gap: 5px;
+        margin-bottom: 10px;
+
+        .app__button {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .settings__language {
+        column-gap: 5px;
+        font-size: 1rem;
+        line-height: 2.2rem;
+
+        .language__button {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

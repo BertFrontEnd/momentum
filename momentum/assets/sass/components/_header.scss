@@ -1,5 +1,6 @@
 .header {
   @include alignment(space-between, space-between, row, wrap);
+  column-gap: 20px;
   width: 100%;
 
   .header__audio {
@@ -159,9 +160,10 @@
 
   .header__city {
     @include alignment(flex-start, center, column, nowrap);
+    width: 200px;
 
     .city__location {
-      width: 200px;
+      width: inherit;
       text-align: center;
     }
   }

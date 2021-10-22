@@ -1,0 +1,34 @@
+@media (max-width: $mobile) {
+  .main {
+    @include alignment(center, center, row, nowrap);
+    margin: 40px 0;
+
+    .main__section {
+      .section__time {
+        font-size: 4rem;
+        line-height: 4rem;
+      }
+
+      .section__date {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+
+      .section__greeting {
+        margin-bottom: 10px;
+        font-size: 2rem;
+        line-height: 2rem;
+
+        .greeting__name {
+          width: 200px;
+        }
+      }
+
+      .section__focus {
+        font-size: 1.6rem;
+        line-height: 2rem;
+      }
+    }
+  }
+}
