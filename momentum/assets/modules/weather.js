@@ -39,32 +39,30 @@ function getForecast() {
 
 // Render Error Api
 function renderErrorApi() {
-  if (location.value === '[Location]') {
-    weatherForecast.innerHTML = `<span>No Location</span>`;
+  if (!location.value) {
+    forecast.textContent = 'No Location';
   } else {
-    weatherForecast.innerHTML = `
-  <span>Incorrect</span>
-  <span>request</span>
-  <span>to API</span>
-  `;
+    forecast.textContent = 'Incorrect request to API';
   }
 }
 
 // Render Error Fetch
 function renderErrorFetch() {
-  if (location.value === '[Location]') {
-    weatherForecast.innerHTML = `<span>No Location</span>`;
+  if (!location.value) {
+    forecast.textContent = 'No Location';
   } else {
-    weatherForecast.innerHTML = `
-  <span>Wrong request</span>
-  <span>or crashed</span>
-  <span>Internet / Api</span>
-  `;
+    forecast.textContent = 'Wrong request or crashed Internet / Api';
   }
 }
 
 // Render Forecast
 async function renderForecast() {
+  forecast.textContent = '';
+  feels.textContent = '';
+  wind.textContent = '';
+  humidity.textContent = '';
+  icon.style.backgroundImage = '';
+
   const currentForecast = await getForecast();
 
   forecast.textContent = `${Math.round(currentForecast.main.temp - 273.15)}°, ${
