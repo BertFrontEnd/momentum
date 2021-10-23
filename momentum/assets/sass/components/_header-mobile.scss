@@ -2,11 +2,29 @@
   .header {
     @include alignment(center, center, row, wrap);
     column-gap: 20px;
-    row-gap: 20px;
+    row-gap: 5px;
 
     .header__audio {
       width: 160px;
-      /* margin: 0 150px; */
+    }
+  }
+}
+
+@media (max-width: $audio-none) {
+  .header {
+    @include alignment(center, center, column, nowrap);
+
+    .header__audio {
+      .audio__volume,
+      .audio__current,
+      .audio__duration,
+      .audio__play-list {
+        display: none;
+      }
+
+      .audio__direction {
+        margin-bottom: 0;
+      }
     }
   }
 }

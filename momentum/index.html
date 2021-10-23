@@ -15,12 +15,12 @@
       <header class="header">
         <section class="header__audio">
           <div class="audio__direction">
-            <button class="direction__button button--prev"></button>
-            <button class="direction__button button--play"></button>
-            <button class="direction__button button--next"></button>
+            <button class="direction__button direction__button--prev"></button>
+            <button class="direction__button direction__button--play"></button>
+            <button class="direction__button direction__button--next"></button>
           </div>
           <div class="audio__volume">
-            <button class="volume__button volume--min"></button>
+            <button class="volume__button volume__button--min"></button>
             <input
               type="range"
               class="volume__range"
@@ -28,13 +28,13 @@
               max="100"
               value="50"
             />
-            <button class="volume__button volume--max"></button>
+            <button class="volume__button volume__button--max"></button>
           </div>
           <div class="audio__current">
             <marquee class="current__track">Current Track</marquee>
           </div>
           <div class="audio__duration">
-            <span class="duration__time duration--min">00:00</span>
+            <span class="duration__time duration__time--min">00:00</span>
             <input
               type="range"
               class="duration__range"
@@ -42,7 +42,7 @@
               max="100"
               value="0"
             />
-            <span class="duration__time duration--max">03:23</span>
+            <span class="duration__time duration__time--max">03:23</span>
           </div>
           <ul class="audio__play-list">
             <li class="play-list__item play-list__item--active">
@@ -53,16 +53,15 @@
             <li class="play-list__item">Ennio Morricone</li>
           </ul>
         </section>
-        <section class="header__city">
-          <span class="city__title">Location:</span>
-          <input
-            type="text"
-            class="city__location"
-            placeholder="[Enter Your Location]"
-            value="Minsk"
-          />
-        </section>
         <section class="header__weather">
+          <div class="weather__city">
+            <input
+              type="text"
+              class="city__location"
+              placeholder="[Location]"
+              value="Minsk"
+            />
+          </div>
           <div class="weather__forecast">
             <span class="forecast__description">7°, light rain</span>
           </div>
@@ -79,7 +78,7 @@
       </header>
 
       <main class="main">
-        <button class="main__arrow arrow--left">‹</button>
+        <button class="main__arrow main__arrow--left"></button>
         <section class="main__section">
           <div class="section__time">
             <time class="time__current">14:45:54</time>
@@ -104,7 +103,7 @@
             />
           </div>
         </section>
-        <button class="main__arrow arrow--right">›</button>
+        <button class="main__arrow main__arrow--right"></button>
       </main>
 
       <footer class="footer">
@@ -169,10 +168,6 @@
             <li>
               <input type="checkbox" id="audio" checked />
               <label for="audio" class="app__button app__button--audio"></label>
-            </li>
-            <li>
-              <input type="checkbox" id="city" checked />
-              <label for="city" class="app__button app__button--city"></label>
             </li>
             <li>
               <input type="checkbox" id="weather" checked />

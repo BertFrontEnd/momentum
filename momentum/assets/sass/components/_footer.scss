@@ -155,9 +155,11 @@
       .request__field {
         width: 100%;
         padding: 5px;
+        text-overflow: ellipsis;
         text-align: center;
         border-radius: 2px;
         background-color: $background-color-request;
+        overflow: hidden;
       }
 
       .request__button {
@@ -216,10 +218,6 @@
 
       .app__button--audio {
         background-image: url('./assets/images/navigation/audio.svg');
-      }
-
-      .app__button--city {
-        background-image: url('./assets/images/navigation/city.svg');
       }
 
       .app__button--weather {

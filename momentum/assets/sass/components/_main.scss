@@ -22,11 +22,11 @@
     }
   }
 
-  .arrow--left {
+  .main__arrow--left {
     mask-image: url('./assets/images/navigation/left.svg');
   }
 
-  .arrow--right {
+  .main__arrow--right {
     mask-image: url('./assets/images/navigation/right.svg');
   }
 
@@ -57,8 +57,10 @@
       }
 
       .greeting__name {
-        width: 370px;
+        width: 380px;
+        text-overflow: ellipsis;
         text-align: center;
+        overflow: hidden;
       }
     }
 
@@ -73,7 +75,9 @@
 
       .focus__text {
         width: 190px;
+        text-overflow: ellipsis;
         text-align: center;
+        overflow: hidden;
       }
     }
   }
