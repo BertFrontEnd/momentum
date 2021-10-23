@@ -162,6 +162,8 @@
     position: relative;
     @include alignment(flex-start, flex-end, column, nowrap);
     width: 180px;
+    text-align: right;
+    @extend %transition;
 
     .weather__city {
       .city__location {
@@ -172,17 +174,12 @@
       }
     }
 
-    &::before {
-      position: absolute;
+    .weather__icon {
       width: 50px;
       height: 50px;
-      content: '';
-      background-image: url('./assets/images/weather/icon-weather.svg');
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
-      left: 0;
-      top: 0;
     }
   }
 }

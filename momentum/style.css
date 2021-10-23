@@ -68,7 +68,7 @@ input[type='range']::-webkit-slider-runnable-track {
 }
 
 body, .header .header__audio .audio__direction .direction__button, .header .header__audio .audio__volume .volume__button, .header .header__audio .audio__play-list .play-list__item,
-.header .header__audio .audio__play-list .play-list__item--active, .main .main__arrow, .footer .footer__todo .todo__list, .footer .footer__quote .quote__button, .footer .footer__settings .settings__image .image__source, .footer .footer__settings .settings__request .request__button, .footer .footer__settings .settings__app .app__button, .footer .footer__settings .settings__language .language__button {
+.header .header__audio .audio__play-list .play-list__item--active, .header .header__weather, .main .main__arrow, .footer .footer__todo .todo__list, .footer .footer__quote .quote__button, .footer .footer__settings .settings__image .image__source, .footer .footer__settings .settings__request .request__button, .footer .footer__settings .settings__app .app__button, .footer .footer__settings .settings__language .language__button {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -390,6 +390,7 @@ footer {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   width: 180px;
+  text-align: right;
 }
 
 .header .header__weather .weather__city .city__location {
@@ -399,17 +400,12 @@ footer {
   overflow: hidden;
 }
 
-.header .header__weather::before {
-  position: absolute;
+.header .header__weather .weather__icon {
   width: 50px;
   height: 50px;
-  content: '';
-  background-image: url("./assets/images/weather/icon-weather.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  left: 0;
-  top: 0;
 }
 
 @media (max-width: 1024px) {
@@ -518,6 +514,27 @@ footer {
   }
   .header .header__audio .audio__direction {
     margin-bottom: 0;
+  }
+  .header .header__weather {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    text-align: center;
+  }
+  .header .header__weather .weather__city .city__location {
+    text-align: center;
   }
 }
 

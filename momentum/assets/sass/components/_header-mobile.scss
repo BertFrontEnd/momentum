@@ -26,5 +26,16 @@
         margin-bottom: 0;
       }
     }
+
+    .header__weather {
+      @include alignment(center, center, column, nowrap);
+      text-align: center;
+
+      .weather__city {
+        .city__location {
+          text-align: center;
+        }
+      }
+    }
   }
 }
