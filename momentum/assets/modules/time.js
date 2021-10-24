@@ -18,10 +18,12 @@ const getTime = () => {
 };
 
 // Render Time
-function renderTime() {
-  const currentTime = getTime();
+const renderTime = () => {
+  setInterval(() => {
+    const currentTime = getTime();
 
-  time.textContent = `${currentTime.hour}:${currentTime.minute}:${currentTime.second}`;
-}
+    time.textContent = `${currentTime.hour}:${currentTime.minute}:${currentTime.second}`;
+  }, 1);
+};
 
 export { renderTime };

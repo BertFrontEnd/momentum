@@ -5,11 +5,7 @@ import { setPhrase } from './assets/modules/quote.js';
 import { renderTime } from './assets/modules/time.js';
 
 window.addEventListener('load', renderForecast);
-window.addEventListener('load', () => {
-  setInterval(() => {
-    renderTime();
-  }, 1);
-});
+window.addEventListener('load', renderTime);
 
 setForecast();
 setVisibility();
