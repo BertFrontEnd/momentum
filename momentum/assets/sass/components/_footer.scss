@@ -5,6 +5,7 @@
 
   .footer__todo {
     width: 200px;
+    @extend %transition;
 
     .todo__list {
       @include alignment(space-between, center, row, wrap);
@@ -43,6 +44,7 @@
   .footer__quote {
     @include alignment(center, center, column, nowrap);
     width: 500px;
+    @extend %transition;
 
     .quote__text,
     .quote__author {
@@ -81,6 +83,7 @@
   .footer__settings {
     @include alignment(flex-start, flex-end, column, nowrap);
     min-width: 200px;
+    @extend %transition;
 
     .settings__image {
       @include alignment(flex-end, space-between, row, nowrap);

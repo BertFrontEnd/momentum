@@ -74,7 +74,6 @@ async function renderForecast() {
   wind.textContent = `Wind: ${currentForecast.wind.speed} m/s`;
   humidity.textContent = `Humidity: ${currentForecast.wind.speed}%`;
   icon.style.backgroundImage = `url('./assets/images/weather/${currentForecast.weather[0].icon}.svg`;
-  console.log(icon);
 }
 
 export { renderForecast };

@@ -67,8 +67,8 @@ input[type='range']::-webkit-slider-runnable-track {
   display: none;
 }
 
-body, .header .header__audio .audio__direction .direction__button, .header .header__audio .audio__volume .volume__button, .header .header__audio .audio__play-list .play-list__item,
-.header .header__audio .audio__play-list .play-list__item--active, .header .header__weather, .main .main__arrow, .footer .footer__todo .todo__list, .footer .footer__quote .quote__button, .footer .footer__settings .settings__image .image__source, .footer .footer__settings .settings__request .request__button, .footer .footer__settings .settings__app .app__button, .footer .footer__settings .settings__language .language__button {
+body, .header .header__audio, .header .header__audio .audio__direction .direction__button, .header .header__audio .audio__volume .volume__button, .header .header__audio .audio__play-list .play-list__item,
+.header .header__audio .audio__play-list .play-list__item--active, .header .header__weather, .main, .main .main__arrow, .footer .footer__todo, .footer .footer__todo .todo__list, .footer .footer__quote, .footer .footer__quote .quote__button, .footer .footer__settings, .footer .footer__settings .settings__image .image__source, .footer .footer__settings .settings__request .request__button, .footer .footer__settings .settings__app .app__button, .footer .footer__settings .settings__language .language__button {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -124,6 +124,10 @@ main {
 
 footer {
   padding: 0 20px 20px;
+}
+
+.visibility {
+  opacity: 0;
 }
 
 .header {

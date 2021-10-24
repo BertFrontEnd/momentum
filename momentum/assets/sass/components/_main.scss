@@ -2,6 +2,7 @@
   @include alignment(space-between, center, row, nowrap);
   column-gap: 20px;
   width: 100%;
+  @extend %transition;
 
   .main__arrow {
     width: 32px;
