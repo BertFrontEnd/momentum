@@ -17,8 +17,8 @@ const getTime = () => {
   return objectTime;
 };
 
-// Render Time
-const renderTime = () => {
+// Set Time
+const setTime = () => {
   setInterval(() => {
     const currentTime = getTime();
 
@@ -26,4 +26,4 @@ const renderTime = () => {
   }, 1);
 };
 
-export { renderTime };
+export { setTime };
