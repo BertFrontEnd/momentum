@@ -76,6 +76,7 @@ async function renderForecast() {
   icon.style.backgroundImage = `url('./assets/images/weather/${currentForecast.weather[0].icon}.svg`;
 }
 
+// Set Forecast
 const setForecast = () => {
   location.addEventListener('blur', renderForecast);
 };

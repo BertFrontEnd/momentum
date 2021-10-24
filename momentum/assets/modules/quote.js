@@ -3,7 +3,7 @@ const quoteText = document.querySelector('.quote__text');
 const quoteAuthor = document.querySelector('.quote__author');
 
 // Get Phrase
-function getPhrase() {
+const getPhrase = () => {
   /*   const urlApi =
     'https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en'; */
 
@@ -16,7 +16,7 @@ function getPhrase() {
       throw new Error('Something went wrong!');
     });
   return requestApi;
-}
+};
 
 // Render Phrase
 async function renderPhrase() {
