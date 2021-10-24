@@ -35,10 +35,15 @@
     @include alignment(center, center, column, nowrap);
 
     .section__time {
-      @include alignment(center, center, column, nowrap);
-      /* width: 400px; */
+      @include alignment(space-between, space-between, row, wrap);
+      width: 400px;
       font-size: 10rem;
       line-height: 10rem;
+      text-align: justify;
+
+      .time__current {
+        width: 100%;
+      }
     }
 
     .section__date {

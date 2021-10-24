@@ -1,3 +1,4 @@
+// Toggle Visibility
 const toggleVisibility = (selector) => {
   const element = document.querySelector(selector);
   element.classList.toggle('visibility');
@@ -9,6 +10,7 @@ const buttonTime = document.querySelector('.app__button--time');
 const buttonTodo = document.querySelector('.app__button--todo');
 const buttonQuote = document.querySelector('.app__button--quote');
 
+// Set Visibility
 const setVisibility = () => {
   buttonAudio.addEventListener('click', () => {
     toggleVisibility('.header__audio');
