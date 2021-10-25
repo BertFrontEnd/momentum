@@ -398,7 +398,7 @@ footer {
 }
 
 .header .header__weather .weather__city .city__location {
-  width: 120px;
+  /* width: 120px; */
   text-overflow: ellipsis;
   text-align: right;
   overflow: hidden;

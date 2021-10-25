@@ -23,7 +23,6 @@ async function renderPhrase() {
   quoteButton.classList.add('quote__button--request');
 
   const phrases = await getPhrase();
-  console.log(phrases);
   const currentRandomPhrase =
     phrases[Math.floor(Math.random() * phrases.length)];
 

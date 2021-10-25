@@ -31,7 +31,6 @@ const getDay = () => {
       throw new Error('Something went wrong!');
   }
 
-  console.log(currentDay);
   return currentDay;
 };
 
@@ -46,7 +45,6 @@ const getDate = () => {
 
   const currentDate = date.toLocaleDateString('en-EN', options);
 
-  console.log(currentDate);
   return currentDate;
 };
 
