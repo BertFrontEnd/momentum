@@ -38,4 +38,4 @@ const setPhrase = () => {
   quoteButton.addEventListener('click', renderPhrase);
 };
 
-export { setPhrase };
+export { renderPhrase, setPhrase };

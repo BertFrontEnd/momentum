@@ -71,8 +71,8 @@ async function renderForecast() {
   feels.textContent = `Feels: ${Math.round(
     currentForecast.main.feels_like - 273.15,
   )}°`;
-  wind.textContent = `Wind: ${currentForecast.wind.speed} m/s`;
-  humidity.textContent = `Humidity: ${currentForecast.wind.speed}%`;
+  wind.textContent = `Wind: ${Math.round(currentForecast.wind.speed)} m/s`;
+  humidity.textContent = `Humidity: ${Math.round(currentForecast.wind.speed)}%`;
   icon.style.backgroundImage = `url('./assets/images/weather/${currentForecast.weather[0].icon}.svg`;
 }
 
