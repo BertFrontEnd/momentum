@@ -879,8 +879,8 @@ footer {
 .footer .footer__quote .quote__button {
   width: 28px;
   height: 28px;
-  -webkit-mask-image: url("./assets/images/navigation/refresh.svg");
-          mask-image: url("./assets/images/navigation/refresh.svg");
+  -webkit-mask-image: url("./assets/images/navigation/quote-refresh.svg");
+          mask-image: url("./assets/images/navigation/quote-refresh.svg");
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-position: center;

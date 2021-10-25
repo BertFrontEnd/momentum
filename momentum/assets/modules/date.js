@@ -1,98 +1,58 @@
 const dateCurrent = document.querySelector('.date__current');
 
 // Get Day
-function getCurrentDate() {
-  const currentDate = new Date();
+const getDay = () => {
+  let currentDay = new Date().getDay();
 
-  let month = currentDate.getMonth();
-
-  switch (month) {
+  switch (currentDay) {
     case 0:
-      month = 'January';
+      currentDay = 'Sunday';
       break;
     case 1:
-      month = 'February';
+      currentDay = 'Monday';
       break;
     case 2:
-      month = 'March';
+      currentDay = 'Tuesday';
       break;
     case 3:
-      month = 'April';
+      currentDay = 'Wednesday';
       break;
     case 4:
-      month = 'May';
+      currentDay = 'Thursday';
       break;
     case 5:
-      month = 'June';
+      currentDay = 'Friday';
       break;
     case 6:
-      month = 'July';
-      break;
-    case 7:
-      month = 'August';
-      break;
-    case 8:
-      month = 'September';
-      break;
-    case 9:
-      month = 'October';
-      break;
-    case 10:
-      month = 'November';
-      break;
-    case 11:
-      month = 'November';
+      currentDay = 'Saturday';
       break;
 
     default:
       throw new Error('Something went wrong!');
   }
 
-  let day = currentDate.getDay();
+  console.log(currentDay);
+  return currentDay;
+};
 
-  switch (day) {
-    case 0:
-      day = 'Sunday';
-      break;
-    case 1:
-      day = 'Monday';
-      break;
-    case 2:
-      day = 'Tuesday';
-      break;
-    case 3:
-      day = 'Wednesday';
-      break;
-    case 4:
-      day = 'Thursday';
-      break;
-    case 5:
-      day = 'Friday';
-      break;
-    case 6:
-      day = 'Saturday';
-      break;
+// Get Date
+const getDate = () => {
+  const date = new Date();
 
-    default:
-      throw new Error('Something went wrong!');
-  }
-
-  let date = currentDate.getDate();
-
-  const objectDay = {
-    month: month,
-    day: day,
-    date: date,
+  const options = {
+    month: 'long',
+    day: 'numeric',
   };
 
-  return objectDay;
-}
+  const currentDate = date.toLocaleDateString('en-EN', options);
+
+  console.log(currentDate);
+  return currentDate;
+};
 
 // Set Day
 const setDate = () => {
-  dateCurrent.textContent = `${getCurrentDate().month}, ${
-    getCurrentDate().day
-  } ${getCurrentDate().date}`;
+  dateCurrent.textContent = `${getDay()}, ${getDate()}`;
 };
 
 export { setDate };
