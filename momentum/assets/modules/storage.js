@@ -20,15 +20,54 @@ function getLocalStorageInfo(selector, key) {
 }
 
 // Set Local Storage Info
+const setLocalStorageInfo = (e) => {
+  let target = e.target;
 
-const setLocalStorageInfo = () => {};
+  if (e.type === 'keypress') {
+    if (e.which == 13 || e.keyCode === 13) {
+      if (
+        !target.textContent.toString().trim() == '' &&
+        !target.textContent.includes('[Enter ')
+      ) {
+        localStorage.setItem(target.className, target.textContent);
+      }
+      target.blur();
+    }
+  } else if (e.type === 'blur') {
+    if (
+      target.textContent.toString().trim() == '' ||
+      target.textContent.includes('[Enter ')
+    ) {
+      if (target.className === 'city__location') {
+        getLocalStorageInfo(location, 'location');
+      } else if (target.className === 'focus__text') {
+        getLocalStorageInfo(text, 'text');
+      } else if (target.className === 'greeting__name') {
+        getLocalStorageInfo(name, 'name');
+      }
+    } else {
+      localStorage.setItem(target.className, target.textContent);
+    }
+  }
+};
 
-// Set Value
-
-const setValue = () => {
+//  Get Value
+const getValue = () => {
   getLocalStorageInfo(location, 'location');
   getLocalStorageInfo(name, 'name');
   getLocalStorageInfo(text, 'text');
 };
 
-export { setValue };
+// Set Value
+const setValue = () => {
+  location.addEventListener('keypress', setLocalStorageInfo);
+  location.addEventListener('blur', setLocalStorageInfo);
+
+  name.addEventListener('keypress', setLocalStorageInfo);
+  name.addEventListener('blur', setLocalStorageInfo);
+
+  text.addEventListener('keypress', setLocalStorageInfo);
+  text.addEventListener('blur', setLocalStorageInfo);
+};
+
+export { getValue, setValue };
