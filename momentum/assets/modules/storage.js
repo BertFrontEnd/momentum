@@ -15,6 +15,7 @@ function getLocalStorageInfo(selector, key) {
   } else {
     selector.textContent = loc;
   }
+  console.log('1');
 
   return loc;
 }
@@ -22,6 +23,7 @@ function getLocalStorageInfo(selector, key) {
 // Set Local Storage Info
 const setLocalStorageInfo = (e) => {
   let target = e.target;
+  console.log(2);
 
   if (e.type === 'keypress') {
     if (e.which == 13 || e.keyCode === 13) {
@@ -39,11 +41,11 @@ const setLocalStorageInfo = (e) => {
       target.textContent.includes('[Enter ')
     ) {
       if (target.className === 'city__location') {
-        getLocalStorageInfo(location, 'location');
-      } else if (target.className === 'focus__text') {
-        getLocalStorageInfo(text, 'text');
+        getLocalStorageInfo(location, 'city__location');
       } else if (target.className === 'greeting__name') {
-        getLocalStorageInfo(name, 'name');
+        getLocalStorageInfo(name, 'greeting__name');
+      } else if (target.className === 'focus__text') {
+        getLocalStorageInfo(text, 'focus__text');
       }
     } else {
       localStorage.setItem(target.className, target.textContent);
@@ -53,9 +55,9 @@ const setLocalStorageInfo = (e) => {
 
 //  Get Value
 const getValue = () => {
-  getLocalStorageInfo(location, 'location');
-  getLocalStorageInfo(name, 'name');
-  getLocalStorageInfo(text, 'text');
+  getLocalStorageInfo(location, 'city__location');
+  getLocalStorageInfo(name, 'greeting__name');
+  getLocalStorageInfo(text, 'focus__text');
 };
 
 // Set Value
