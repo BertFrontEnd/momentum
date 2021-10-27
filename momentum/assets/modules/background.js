@@ -42,20 +42,15 @@ const timeOfDayObject = {
   evening: imageArray,
 };
 
-console.log(timeOfDayObject);
-
 // Get Image
 const getImage = () => {
   let folder = timeOfDayArray[Math.floor((date.getHours() % 24) / 6)];
-  console.log(folder);
   let imageNumber = counter % 20;
-  console.log(imageNumber);
   let img = document.createElement('img');
-  let src = `assets/images/background/${folder}/${timeOfDayObject[folder][imageNumber]}.jpg`;
+  let src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${folder}/${timeOfDayObject[folder][imageNumber]}.jpg`;
   img.src = src;
   img.onload = () =>
     (document.querySelector('body').style.backgroundImage = `url(${src})`);
-  console.log(src);
 };
 
 // Render Background
