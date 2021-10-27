@@ -20,8 +20,6 @@ body {
 .wrapper {
   @include alignment(space-between, space-between, column, nowrap);
   row-gap: 40px;
-  /* height: calc(100vh - 40px); */
-  /* height: 95.8vh; */
   height: 100vh;
   width: 100%;
 }
