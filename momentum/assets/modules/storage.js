@@ -13,9 +13,8 @@ function getLocalStorageInfo(selector, key) {
       selector.value = '';
     }
   } else {
-    selector.textContent = loc;
+    selector.value = loc;
   }
-  console.log('1');
 
   return loc;
 }
@@ -23,22 +22,21 @@ function getLocalStorageInfo(selector, key) {
 // Set Local Storage Info
 const setLocalStorageInfo = (e) => {
   let target = e.target;
-  console.log(2);
 
   if (e.type === 'keypress') {
     if (e.which == 13 || e.keyCode === 13) {
       if (
-        !target.textContent.toString().trim() == '' &&
-        !target.textContent.includes('[Enter ')
+        !target.value.toString().trim() == '' &&
+        !target.value.includes('[Enter ')
       ) {
-        localStorage.setItem(target.className, target.textContent);
+        localStorage.setItem(target.className, target.value);
       }
       target.blur();
     }
   } else if (e.type === 'blur') {
     if (
-      target.textContent.toString().trim() == '' ||
-      target.textContent.includes('[Enter ')
+      target.value.toString().trim() == '' ||
+      target.value.includes('[Enter ')
     ) {
       if (target.className === 'city__location') {
         getLocalStorageInfo(location, 'city__location');
@@ -48,7 +46,7 @@ const setLocalStorageInfo = (e) => {
         getLocalStorageInfo(text, 'focus__text');
       }
     } else {
-      localStorage.setItem(target.className, target.textContent);
+      localStorage.setItem(target.className, target.value);
     }
   }
 };
