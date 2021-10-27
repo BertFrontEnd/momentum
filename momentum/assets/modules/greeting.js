@@ -10,7 +10,7 @@ const getGreeting = () => {
       greeting = 'Good morning, ';
       break;
     case currentHour >= 12 && currentHour < 18:
-      greeting = 'Good day, ';
+      greeting = 'Good afternoon, ';
       break;
     case currentHour >= 18 && currentHour < 24:
       greeting = 'Good evening, ';

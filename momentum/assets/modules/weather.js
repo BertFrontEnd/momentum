@@ -1,7 +1,5 @@
 const location = document.querySelector('.city__location');
 
-const weatherForecast = document.querySelector('.weather__forecast');
-
 const forecast = document.querySelector('.forecast__description');
 const feels = document.querySelector('.feels__description');
 const wind = document.querySelector('.wind__description');
@@ -11,6 +9,8 @@ const icon = document.querySelector('.weather__icon ');
 
 // Get Forecast
 function getForecast() {
+  const location = document.querySelector('.city__location');
+
   const idApi = `1b6b5070efbf756fbf0bba5241bcc2db`;
   const urlApi = `https://api.openweathermap.org/data/2.5/weather?q=${location.value}&appid=${idApi}`;
 

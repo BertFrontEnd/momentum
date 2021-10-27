@@ -52,7 +52,7 @@ const setLocalStorageInfo = (e) => {
 };
 
 //  Get Value
-const getValue = () => {
+const renderValue = () => {
   getLocalStorageInfo(location, 'city__location');
   getLocalStorageInfo(name, 'greeting__name');
   getLocalStorageInfo(text, 'focus__text');
@@ -70,4 +70,4 @@ const setValue = () => {
   text.addEventListener('blur', setLocalStorageInfo);
 };
 
-export { getValue, setValue };
+export { renderValue, setValue };
