@@ -20,8 +20,11 @@ const getRandomArray = () => {
   return arraySet;
 };
 
-// Counter
+// Set Counter
 let counter = 0;
+
+// Get Time
+let date = new Date();
 
 // Array of Image
 const imageArray = getRandomArray().map((element) => {
@@ -39,10 +42,14 @@ const timeOfDayObject = {
   evening: imageArray,
 };
 
+console.log(timeOfDayObject);
+
 // Get Image
 const getImage = () => {
-  let folder = timeOfDayArray[Math.floor((counter % 24) / 6)];
-  let imageNumber = counter % 6;
+  let folder = timeOfDayArray[Math.floor((date.getHours() % 24) / 6)];
+  console.log(folder);
+  let imageNumber = counter % 20;
+  console.log(imageNumber);
   let img = document.createElement('img');
   let src = `assets/images/background/${folder}/${timeOfDayObject[folder][imageNumber]}.jpg`;
   img.src = src;
@@ -51,17 +58,13 @@ const getImage = () => {
   console.log(src);
 };
 
-// Get Time
-let date = new Date();
-
 // Render Background
 const renderBackground = () => {
   getImage();
-
-  if (date.getMinutes() == 0) {
+  setInterval(() => {
     counter++;
     getImage();
-  }
+  }, 1.08e6);
 };
 
 // Start Script
