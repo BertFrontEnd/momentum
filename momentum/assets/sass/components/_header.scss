@@ -44,6 +44,12 @@
         mask-image: url('./assets/images/navigation/play.svg');
       }
 
+      .direction__button--pause {
+        width: 42px;
+        height: 42px;
+        mask-image: url('./assets/images/navigation/pause.svg');
+      }
+
       .direction__button--next {
         mask-image: url('./assets/images/navigation/play-next.svg');
       }

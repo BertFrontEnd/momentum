@@ -15,6 +15,7 @@ import {
   nextImage,
   previousImage,
 } from './assets/modules/background.js';
+import { toggleButton } from './assets/modules/audio.js';
 
 window.addEventListener('load', renderValue);
 window.addEventListener('load', renderForecast);
@@ -31,3 +32,4 @@ setGreeting();
 setLoop();
 nextImage();
 previousImage();
+toggleButton();

@@ -227,6 +227,13 @@ footer {
           mask-image: url("./assets/images/navigation/play.svg");
 }
 
+.header .header__audio .audio__direction .direction__button--pause {
+  width: 42px;
+  height: 42px;
+  -webkit-mask-image: url("./assets/images/navigation/pause.svg");
+          mask-image: url("./assets/images/navigation/pause.svg");
+}
+
 .header .header__audio .audio__direction .direction__button--next {
   -webkit-mask-image: url("./assets/images/navigation/play-next.svg");
           mask-image: url("./assets/images/navigation/play-next.svg");
