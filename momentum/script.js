@@ -14,8 +14,8 @@ import {
   setLoop,
   nextImage,
   previousImage,
-} from './assets/modules/background.js';
-import { /* toggleButton, */ setAudio } from './assets/modules/audio.js';
+} from './assets/modules/unsplash.js';
+import { setAudio } from './assets/modules/audio.js';
 
 window.addEventListener('load', renderValue);
 window.addEventListener('load', renderForecast);
@@ -32,5 +32,4 @@ setGreeting();
 setLoop();
 nextImage();
 previousImage();
-/* toggleButton(); */
 setAudio();
