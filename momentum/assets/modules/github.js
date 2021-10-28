@@ -45,12 +45,11 @@ const timeOfDayObject = {
 // Get Image
 const getImage = () => {
   if (github.checked == true) {
-    console.log(github.checked);
     let folder = timeOfDayArray[Math.floor((date.getHours() % 24) / 6)];
     let imageNumber = counter % 20;
     let img = document.createElement('img');
     let src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${folder}/${timeOfDayObject[folder][imageNumber]}.jpg`;
-    console.log(src);
+    console.log('url:', src);
     img.src = src;
     img.onload = () =>
       (document.querySelector('body').style.backgroundImage = `url(${src})`);

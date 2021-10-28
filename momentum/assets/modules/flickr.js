@@ -28,7 +28,7 @@ function getUnsplashImage() {
 
   const idApi = `b53ea7820404579c38fa41b37c9608cd`;
   const urlApi = ` https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${idApi}&tags=${tagAPI}&extras=url_l&format=json&nojsoncallback=1`;
-  console.log(urlApi);
+  console.log('url:', urlApi);
 
   const requestApi = fetch(urlApi)
     .then((res) => {
@@ -61,7 +61,6 @@ requestButton.addEventListener('click', () => {
 // Get Image
 async function getImage() {
   if (flickr.checked == true) {
-    console.log(flickr.checked);
     let img = document.createElement('img');
     let src = await getUnsplashImage();
     img.src = src;

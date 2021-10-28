@@ -21,7 +21,6 @@ const fromLocalStorage = (selector, key) => {
   if (local == null) {
     return;
   } else {
-    console.log(local);
     selector.checked = Boolean(local);
   }
 };

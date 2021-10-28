@@ -20,7 +20,7 @@ function getUnsplashImage() {
 
   const idApi = `MgO_AHZMq1XFgxbGWbar_LTzXmXayuqDh2kco9Zr7xw`;
   const urlApi = `https://api.unsplash.com/photos/random?orientation=landscape&query=${tagAPI}&client_id=${idApi}`;
-  console.log(urlApi);
+  console.log('url:', urlApi);
 
   const requestApi = fetch(urlApi)
     .then((res) => {
@@ -54,7 +54,6 @@ requestButton.addEventListener('click', () => {
 async function getImage() {
   const unsplash = document.querySelector('#unsplash');
   if (unsplash.checked == true) {
-    console.log(unsplash.checked);
     let img = document.createElement('img');
     let src = await getUnsplashImage();
     img.src = src;

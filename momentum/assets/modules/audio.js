@@ -98,6 +98,11 @@ const setAudio = () => {
   audioDirection.addEventListener('click', (e) => {
     getAudio(e);
   });
+  audio.addEventListener('ended', () => {
+    playNumber++;
+    audio.src = playList[playNumber].src;
+    audio.play();
+  });
 };
 
 export { setAudio };
