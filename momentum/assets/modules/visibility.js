@@ -10,8 +10,14 @@ const buttonTime = document.querySelector('.app__button--time');
 const buttonTodo = document.querySelector('.app__button--todo');
 const buttonQuote = document.querySelector('.app__button--quote');
 
-// Set Visibility
-const setVisibility = () => {
+const audio = document.querySelector('#audio');
+const weather = document.querySelector('#weather');
+const time = document.querySelector('#time');
+const todo = document.querySelector('#todo');
+const quote = document.querySelector('#quote');
+
+// Set Visibility Button
+const setVisibilityButton = () => {
   buttonAudio.addEventListener('click', () => {
     toggleVisibility('.header__audio');
   });
@@ -28,5 +34,23 @@ const setVisibility = () => {
     toggleVisibility('.footer__quote');
   });
 };
+// Set Visibility Load
+const setVisibilityLoad = () => {
+  if (!audio.checked) {
+    toggleVisibility('.header__audio');
+  }
+  if (!weather.checked) {
+    toggleVisibility('.header__weather');
+  }
+  if (!time.checked) {
+    toggleVisibility('.main');
+  }
+  if (!todo.checked) {
+    toggleVisibility('.footer__todo');
+  }
+  if (!quote.checked) {
+    toggleVisibility('.footer__quote');
+  }
+};
 
-export { setVisibility };
+export { setVisibilityButton, setVisibilityLoad };

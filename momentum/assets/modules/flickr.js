@@ -1,6 +1,14 @@
 const nextArrow = document.querySelector('.main__arrow--right');
 const previousArrow = document.querySelector('.main__arrow--left');
 
+// Get Random Number
+const getRandomNumber = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
 // Get Time
 let date = new Date();
 
@@ -18,8 +26,8 @@ function getUnsplashImage() {
     tagAPI = requestField.value;
   }
 
-  const idApi = `MgO_AHZMq1XFgxbGWbar_LTzXmXayuqDh2kco9Zr7xw`;
-  const urlApi = `https://api.unsplash.com/photos/random?orientation=landscape&query=${tagAPI}&client_id=${idApi}`;
+  const idApi = `b53ea7820404579c38fa41b37c9608cd`;
+  const urlApi = ` https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${idApi}&tags=${tagAPI}&extras=url_l&format=json&nojsoncallback=1`;
   console.log(urlApi);
 
   const requestApi = fetch(urlApi)
@@ -34,7 +42,7 @@ function getUnsplashImage() {
       if (data.cod == '404') {
         console.log('Error data');
       } else {
-        return data.urls.regular;
+        return data.photos.photo[getRandomNumber(0, 100)].url_l;
       }
     })
     .catch(() => {
@@ -52,9 +60,8 @@ requestButton.addEventListener('click', () => {
 
 // Get Image
 async function getImage() {
-  const unsplash = document.querySelector('#unsplash');
-  if (unsplash.checked == true) {
-    console.log(unsplash.checked);
+  if (flickr.checked == true) {
+    console.log(flickr.checked);
     let img = document.createElement('img');
     let src = await getUnsplashImage();
     img.src = src;
@@ -64,8 +71,8 @@ async function getImage() {
 }
 
 // Render Background
-const renderBackgroundUnsplash = () => {
-  if (unsplash.checked == true) {
+const renderBackgroundFlickr = () => {
+  if (flickr.checked == true) {
     getImage();
     setInterval(() => {
       counter++;
@@ -78,8 +85,8 @@ const renderBackgroundUnsplash = () => {
 let startScript = (date.getHours() + 1) % 24;
 
 // Set Loop
-const setLoopUnsplash = () => {
-  if (unsplash.checked == true) {
+const setLoopFlickr = () => {
+  if (flickr.checked == true) {
     if (date.getMinutes() == 0 && date.getHours() == startScript) {
       startScript = (startScript + 1) % 24;
       console.log(startScript);
@@ -87,7 +94,7 @@ const setLoopUnsplash = () => {
       getImage();
     }
 
-    setTimeout(setLoopUnsplash, 500);
+    setTimeout(setLoopFlickr, 500);
   }
 };
 
@@ -101,17 +108,17 @@ const setDisabled = (selector) => {
 };
 
 // Next Image
-const nextImageUnsplash = () => {
-  nextArrow.addEventListener('click', () => {
-    if (unsplash.checked == true) {
+const nextImageFlickr = () => {
+  if (flickr.checked == true) {
+    nextArrow.addEventListener('click', () => {
       getImage();
       setDisabled(nextArrow);
-    }
-  });
+    });
+  }
 };
 
-const previousImageUnsplash = () => {
-  if (unsplash.checked == true) {
+const previousImageFlickr = () => {
+  if (flickr.checked == true) {
     previousArrow.addEventListener('click', () => {
       getImage();
       setDisabled(previousArrow);
@@ -120,8 +127,8 @@ const previousImageUnsplash = () => {
 };
 
 export {
-  renderBackgroundUnsplash,
-  setLoopUnsplash,
-  nextImageUnsplash,
-  previousImageUnsplash,
+  renderBackgroundFlickr,
+  setLoopFlickr,
+  nextImageFlickr,
+  previousImageFlickr,
 };

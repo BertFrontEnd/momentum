@@ -1,111 +1,17 @@
-const nextArrow = document.querySelector('.main__arrow--right');
-const previousArrow = document.querySelector('.main__arrow--left');
+const github = document.querySelector('#github');
+const unsplash = document.querySelector('#unsplash');
+const flickr = document.querySelector('#flickr');
 
-// Get Random Number
-const getRandomNumber = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+if (github.checked === true) {
+  renderBackgroundGithub();
+}
 
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+if (unsplash.checked === true) {
+   renderBackgroundUnsplash();
+}
 
-// Get Random Array
-const getRandomArray = () => {
-  let arraySet = [];
+if (flickr.checked === true) {
+    renderBackgroundFlickr();
+}
 
-  while (arraySet.length < 20) {
-    arraySet.push(getRandomNumber(1, 20));
-    arraySet = [...new Set(arraySet)];
-  }
-  return arraySet;
-};
-
-// Set Counter
-let counter = 0;
-
-// Get Time
-let date = new Date();
-
-// Array of Image
-const imageArray = getRandomArray().map((element) => {
-  return (element = element < 10 ? `0${element}` : element.toString());
-});
-
-// Array of Time of Day
-const timeOfDayArray = ['night', 'morning', 'afternoon', 'evening'];
-
-// Object of Time of Day
-const timeOfDayObject = {
-  night: imageArray,
-  morning: imageArray,
-  afternoon: imageArray,
-  evening: imageArray,
-};
-
-// Get Image
-const getImage = () => {
-  let folder = timeOfDayArray[Math.floor((date.getHours() % 24) / 6)];
-  let imageNumber = counter % 20;
-  let img = document.createElement('img');
-  let src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${folder}/${timeOfDayObject[folder][imageNumber]}.jpg`;
-  img.src = src;
-  img.onload = () =>
-    (document.querySelector('body').style.backgroundImage = `url(${src})`);
-};
-
-// Render Background
-const renderBackground = () => {
-  getImage();
-  setInterval(() => {
-    counter++;
-    getImage();
-  }, 1.08e6);
-};
-
-// Start Script
-let startScript = (date.getHours() + 1) % 24;
-
-// Set Loop
-const setLoop = () => {
-  if (date.getMinutes() == 0 && date.getHours() == startScript) {
-    startScript = (startScript + 1) % 24;
-    console.log(startScript);
-    counter++;
-    getImage();
-  }
-
-  setTimeout(setLoop, 500);
-};
-
-// Set Disabled
-
-const setDisabled = (selector) => {
-  selector.disabled = true;
-
-  setTimeout(() => {
-    selector.disabled = false;
-  }, 1000);
-};
-
-// Next Image
-const nextImage = () => {
-  nextArrow.addEventListener('click', () => {
-    counter++;
-    getImage();
-    setDisabled(nextArrow);
-  });
-};
-
-const previousImage = () => {
-  previousArrow.addEventListener('click', () => {
-    if (counter < 0) {
-      counter = 20;
-    }
-
-    counter--;
-    getImage();
-    setDisabled(previousArrow);
-  });
-};
-
-export { renderBackground, setLoop, nextImage, previousImage };
+/* export { renderBackground, setLoop, nextImage, previousImage }; *
