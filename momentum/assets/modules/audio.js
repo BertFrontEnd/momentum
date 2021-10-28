@@ -8,12 +8,35 @@ const currentTrack = document.querySelector('.current__track');
 
 // Set Play Number
 let playNumber = 0;
-/* console.log(playNumber); */
+
+// Set Play List
+const setPlayList = () => {
+  const audioPlayList = document.querySelector('.audio__play-list');
+
+  playList.forEach((elem) => {
+    const track = document.createElement('li');
+    track.classList.add('play-list__item');
+    track.textContent = elem.title;
+    audioPlayList.append(track);
+  });
+};
+
+// Set Active Item
+const setActiveItem = () => {
+  const tracks = document.querySelectorAll('.play-list__item');
+
+  tracks.forEach((elem) => {
+    elem.classList.remove('play-list__item--active');
+  });
+
+  tracks[playNumber].classList.add('play-list__item--active');
+};
 
 // Constructor
 const audio = new Audio();
 audio.src = playList[playNumber].src;
 audio.currentTime = 0;
+/* setActiveItem(); */
 
 // Get Audio
 const getAudio = (e) => {
@@ -29,6 +52,8 @@ const getAudio = (e) => {
       audio.pause();
       console.log('pause');
     }
+
+    setActiveItem();
   }
 
   if (e.target.classList.contains('direction__button--next')) {
@@ -45,6 +70,7 @@ const getAudio = (e) => {
 
     audio.src = playList[playNumber].src;
     audio.play();
+    setActiveItem();
   }
 
   if (e.target.classList.contains('direction__button--prev')) {
@@ -61,12 +87,14 @@ const getAudio = (e) => {
 
     audio.src = playList[playNumber].src;
     audio.play();
+    setActiveItem();
   }
 
   currentTrack.textContent = playList[playNumber].title;
 };
 
 const setAudio = () => {
+  setPlayList();
   audioDirection.addEventListener('click', (e) => {
     getAudio(e);
   });
